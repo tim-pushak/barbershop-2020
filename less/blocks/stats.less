@@ -1,0 +1,289 @@
+@bg-darkgrey: #292929;
+@bg-lightgrey: #f8f5f2;
+@tablet-width: 768px;
+@desktop-width: 1200px;
+@mobile-width-only: 767px;
+
+.stats {
+    //  width: 320px;
+    //margin: 0 auto;
+    width: auto;
+}
+
+.stats__header {
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    color: #000000;
+
+    background-color: #ffffff;
+}
+
+.stats__slogan {
+    display: block;
+    margin-bottom: 15px;
+
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.stats__intro {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.stats__legend {
+    display: block;
+
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.stats__legend--bottom {
+    padding-top: 20px;
+    padding-bottom: 14px;
+
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: @bg-darkgrey;
+}
+
+.stats__legend--top {
+    display: none;
+}
+
+.stats__legend sup {
+    top: -0.25em;
+    
+    font-size: 90%;
+}
+
+
+.stats__list {
+    border-spacing: 0px;
+    background-color: #404040;
+
+    width: 100%;
+    
+    tr:nth-child(2n) {
+        background-color: #4e4e4e;
+    }
+
+    td {
+    padding: 20px;
+    }
+}
+
+.stats__list tr {
+    color: #ffffff;
+
+    background-color: #404040;
+
+    &:nth-child(2) {
+        background-color: #4e4e4e;
+    }
+
+    &:nth-child(3) {
+        background-color: #353535;
+    }
+
+    &:nth-child(4) {
+        background-color: #404040;
+    }
+    
+}
+
+.stats__value,
+.stats__field {
+    width: 50%;
+    padding: 20px;
+    padding-bottom: 19px;
+
+    vertical-align: top;
+}
+
+.stats__value {
+    padding-right: 0;
+
+    font-size: 35px;
+    line-height: 35px;
+    width: 52%;
+}
+
+.stats__value sup {
+    top: -0.35em;
+
+    margin-left: 5px;
+}
+
+.stats__field {
+    padding-left: 0;
+
+    font-size: 18px;
+    line-height: 18px;
+    text-align: right;
+}
+
+@media (min-width: @tablet-width) { 
+    .stats {
+        width: 84%; //640 / ширину родителя ~=84%
+        max-width: 960px; //1200px можна так аби всьо тягнулось
+        margin: 0 auto;
+        margin-top: -185px;
+    }
+
+    .stats__header {
+        position: relative;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &::before {
+            content: "";
+            
+            position: absolute;
+            top: 27px;
+            left: -15px;
+
+            border: 15px solid transparent;
+            border-bottom-color: #ffffff;
+            transform: rotate(45deg);
+        }
+    }
+
+    .stats__slogan {
+        width: 50%;
+        margin-bottom: 18px;
+
+        font-size: 40px;
+        line-height: 40px;
+        text-align: left;
+
+        margin-left: 30px; /////////////////////////////////maybe
+        
+        text-transform: none;
+    }
+
+   /*.stats__slogan br {
+       display: none;
+   } */
+
+    .stats__intro {
+        width: 37.5%;
+        margin-top: 5px;
+        padding: 0;
+        padding-right: 30px; //37px
+
+        text-align: left;
+    }
+
+    .stats__legend--top {
+        display: block; //то для того щоб той суп який є у двох місцях показувався
+        width: 50%; //240
+
+        margin-left: 30px; /////////////////////////////////maybe
+
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .stats__legend--bottom {
+        display: none;
+    }
+
+    .stats__list tbody {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .stats__list tr {
+        width: 50%;
+        box-sizing: border-box; 
+        padding: 25px 35px;
+        padding-bottom: 28px;
+    }
+
+    .stats__list td {
+        display: block;
+        width: auto;//auto
+        padding: 0;
+    }
+
+    .stats__value {
+        margin-bottom: 7px;
+
+        text-align: left;
+
+        font-size: 65px;
+        line-height: 65px;
+    }
+
+    .stats__value--sup {
+        margin-top: -18px;
+    }
+
+    .stats__field {
+        font-size: 20px;
+        line-height: 27px;
+        text-align: left;
+    }
+
+    .stats__field br {
+        display: none;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .stats {
+        display: flex; //кажуть що треба то забирати але воно по інакшому не працює.
+
+        width: 960px;  // викл якщо треба аби тягнулось
+        margin-top: -160px;
+    }
+
+    .stats__header {
+        //display: block;
+        flex-direction: column;
+        width: 300px; //240 
+        //flex-grow: 1; // аби тягнулось
+        &::before {
+            top: 22px;
+        }
+    }
+
+    .stats__slogan {
+        width: auto;
+        margin-bottom: 42px;
+
+        margin-left: 20px;
+    }
+
+    .stats__intro {
+        width: auto;
+        margin-bottom: 32px;
+        padding-right: 30px;
+        padding-left: 0;
+
+        margin-left: 20px;
+    }
+
+    .stats__legend--top {
+        width: auto;
+        margin-top: auto;
+    }
+
+    .stats__list {
+        display: flex;
+        width: 640px;
+        //flex-grow: 1; // аби тягнулось
+    }
+}
+

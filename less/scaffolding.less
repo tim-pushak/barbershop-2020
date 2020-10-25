@@ -1,0 +1,69 @@
+@bg-darkgrey: #292929;
+@bg-lightgrey: #f8f5f2;
+@tablet-width: 768px;
+@desktop-width: 1200px;
+@mobile-width-only: 767px;
+
+
+@font-face {
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans Narrow'), local('PTSans-Narrow'),
+        url('../fonts/pt-sans-narrow-v11-latin_cyrillic-regular.woff2') format('woff2'),
+        url('../fonts/pt-sans-narrow-v11-latin_cyrillic-regular.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'),
+        url('../fonts/pt-sans-narrow-v11-latin_cyrillic-700.woff2') format('woff2'),
+        url('../fonts/pt-sans-narrow-v11-latin_cyrillic-700.woff') format('woff')
+} 
+
+body {
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 27px;
+    font-family: 'PT Sans Narrow';
+
+    color: #f7f4f1;
+    font-style: normal;
+
+    background-color: @bg-darkgrey;
+
+}
+
+img {
+    max-width: 100%;
+  //  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

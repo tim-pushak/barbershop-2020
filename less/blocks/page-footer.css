@@ -1,0 +1,122 @@
+.page-footer {
+  background-color: #292929;
+}
+.page-footer__wrapper {
+  color: #f7f4f1;
+  font-style: normal;
+  background-color: #292929;
+  margin-top: -25px;
+  padding-top: 36px;
+}
+.page-footer__contacts {
+  padding: 0px 20px;
+  padding-top: 33px;
+  padding-bottom: 27px;
+}
+.contacts__text {
+  font-size: 18px;
+}
+.contacts__phone {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.footer__social {
+  display: block;
+  margin: 0 auto;
+  max-width: 280px;
+}
+.social__list {
+  display: flex;
+  padding: 10px 30px;
+}
+.social__item {
+  padding: 0px 10px;
+}
+.footer__friends--desktop {
+  display: none;
+}
+.page-footer__copyright {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.copyright__link {
+  border: 2px solid;
+  border-color: #fff;
+  padding: 5px 10px;
+  margin: 10px 20px;
+  cursor: pointer;
+  transition-property: background;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+}
+.copyright__link:hover {
+  background-color: #fff;
+}
+.footer__social--desktop {
+  display: none;
+}
+.copyright__link {
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .contacts {
+    text-align: center;
+  }
+  .page-footer__contacts {
+    border: 1px solid;
+    border-color: #3e3e3e;
+  }
+  .contacts__phone-mobile {
+    display: none;
+  }
+  .contacts__phone {
+    padding: 16px 65px;
+    border: 2px solid;
+    border-color: #3e3e3e;
+  }
+  .contacts__text {
+    padding-bottom: 23px;
+  }
+  .copyright__top {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 640px;
+  }
+  .pazxcsfasfage-footer__wrapper {
+    max-width: 640px;
+  }
+  .copyright__bottom {
+    display: none;
+  }
+  .brr {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__friends--desktop {
+    display: block;
+    text-align: center;
+  }
+  .footer__social {
+    display: none;
+  }
+  .footer__social--desktop {
+    display: block;
+  }
+  .contacts {
+    margin: 0 auto;
+    max-width: 960px;
+    justify-content: space-around;
+  }
+  .copyright__link {
+    border-radius: 0px;
+  }
+}
